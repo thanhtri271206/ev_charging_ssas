@@ -1,0 +1,240 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e983955d-fc3c-4dee-b623-01eabae50b30" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>EV Charging DW</ID>
+  <Name>EV Charging DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>EV Charging DW</DataSourceID>
+  <Schema>
+    <xs:schema id="EV_x0020_Charging_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="EV_x0020_Charging_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="b65e2ebf-2a3a-4635-baaa-2617481c635b">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_dim_date" msprop:DbTableName="dim_date" msprop:FriendlyName="dim_date" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="60c40594-869f-4cf9-842c-c50f64e06131">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="date_key" msprop:FriendlyName="date_key" msprop:DbColumnName="date_key" msprop:design-time-name="0180e761-784e-4773-985c-dbf6c2d4038d" type="xs:dateTime" />
+                  <xs:element name="day_of_week" msprop:FriendlyName="day_of_week" msprop:DbColumnName="day_of_week" msprop:design-time-name="e4d889e4-3a94-4b42-bf47-001bac8d5092" type="xs:unsignedByte" />
+                  <xs:element name="day_name" msprop:FriendlyName="day_name" msprop:DbColumnName="day_name" msprop:design-time-name="4aa63780-ca0a-48c1-991f-29decaf73395">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="month" msprop:FriendlyName="month" msprop:DbColumnName="month" msprop:design-time-name="27ae8ab1-4a96-4ec5-b2ed-cfd07bc8cbcf" type="xs:unsignedByte" />
+                  <xs:element name="month_name" msprop:FriendlyName="month_name" msprop:DbColumnName="month_name" msprop:design-time-name="7593ebfc-20a2-46d5-8c5d-b7e940aadc54">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="quarter" msprop:FriendlyName="quarter" msprop:DbColumnName="quarter" msprop:design-time-name="b9200e10-78c7-4a1a-81e6-802c248b0c3d" type="xs:unsignedByte" />
+                  <xs:element name="year" msprop:FriendlyName="year" msprop:DbColumnName="year" msprop:design-time-name="117b9fee-76b0-45b1-b8c0-ffb02d736f2f" type="xs:int" />
+                  <xs:element name="is_weekend" msprop:FriendlyName="is_weekend" msprop:DbColumnName="is_weekend" msprop:design-time-name="0f972ff8-6abb-4ef3-83f7-5a1f0641f2b3" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_station" msprop:DbTableName="dim_station" msprop:FriendlyName="dim_station" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="828e5e1a-f180-4978-baef-23c5fb963b6e">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="station_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="station_key" msprop:DbColumnName="station_key" msprop:design-time-name="cc6c53c2-6d9a-4065-b86f-89a03c850a27" type="xs:int" />
+                  <xs:element name="station_id" msprop:FriendlyName="station_id" msprop:DbColumnName="station_id" msprop:design-time-name="788e7859-8cbd-4686-ab68-bd4bab8f15b4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="station_name" msprop:FriendlyName="station_name" msprop:DbColumnName="station_name" msprop:design-time-name="5092b32a-47ca-4728-a7b4-bdb971032634">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="network" msprop:FriendlyName="network" msprop:DbColumnName="network" msprop:design-time-name="740093f7-c1e3-4686-ae1a-8efcaae58222">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="city" msprop:FriendlyName="city" msprop:DbColumnName="city" msprop:design-time-name="04169c69-0533-48fd-bc25-ff4b7cacb640">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="state" msprop:FriendlyName="state" msprop:DbColumnName="state" msprop:design-time-name="ec0f95a0-a77c-44e7-aa64-1a42509ad347">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="location_type" msprop:FriendlyName="location_type" msprop:DbColumnName="location_type" msprop:design-time-name="ba9d0769-967c-4a1b-9f8e-44df8bea1179">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="charger_type" msprop:FriendlyName="charger_type" msprop:DbColumnName="charger_type" msprop:design-time-name="7333156c-47fc-4443-986d-c56f4635cbfd">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="power_output_kw" msprop:FriendlyName="power_output_kw" msprop:DbColumnName="power_output_kw" msprop:design-time-name="f2472efd-82c3-4df0-851f-dfbf42e9d722" type="xs:decimal" />
+                  <xs:element name="ports_total" msprop:FriendlyName="ports_total" msprop:DbColumnName="ports_total" msprop:design-time-name="7f854efc-d194-456e-ad6f-126a39b9a1db" type="xs:int" />
+                  <xs:element name="pricing_type" msprop:FriendlyName="pricing_type" msprop:DbColumnName="pricing_type" msprop:design-time-name="fdf17475-3c05-4128-9df3-05d2a34d0028">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_time" msprop:DbTableName="dim_time" msprop:FriendlyName="dim_time" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="622dd934-3c25-4a8e-97de-cb69bead28e4">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="time_key" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:FriendlyName="time_key" msprop:DbColumnName="time_key" msprop:design-time-name="5a2885b6-5b95-4564-a3b2-808f8fb605a3" type="xs:anyType" />
+                  <xs:element name="hour_of_day" msprop:FriendlyName="hour_of_day" msprop:DbColumnName="hour_of_day" msprop:design-time-name="3742d7bb-7e88-482d-8ce4-9eee5b30077e" type="xs:unsignedByte" />
+                  <xs:element name="minute" msprop:FriendlyName="minute" msprop:DbColumnName="minute" msprop:design-time-name="13afeed9-dcc2-4801-bd59-eb84158ad07a" type="xs:unsignedByte" />
+                  <xs:element name="is_peak_hour" msprop:FriendlyName="is_peak_hour" msprop:DbColumnName="is_peak_hour" msprop:design-time-name="46ca6ec4-fb13-4d57-85b9-b56fa2fc4fea" type="xs:boolean" />
+                  <xs:element name="price_period" msprop:FriendlyName="price_period" msprop:DbColumnName="price_period" msprop:design-time-name="1fb271b0-4bb9-48c2-a329-d583b02d4873" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_fact_ev_charging" msprop:DbTableName="fact_ev_charging" msprop:FriendlyName="fact_ev_charging" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="561ccb93-3576-477d-88b0-210701ed2f07">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="fact_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="fact_id" msprop:DbColumnName="fact_id" msprop:design-time-name="0bbf57a1-e377-4abc-a524-f41cda973a42" type="xs:long" />
+                  <xs:element name="station_key" msprop:FriendlyName="station_key" msprop:DbColumnName="station_key" msprop:design-time-name="3f8ef3af-1b2a-42a6-a8f0-b1d78da4a418" type="xs:int" />
+                  <xs:element name="date_key" msprop:FriendlyName="date_key" msprop:DbColumnName="date_key" msprop:design-time-name="1ad1304f-392f-4eb0-badf-45f0d21f8d73" type="xs:dateTime" />
+                  <xs:element name="time_key" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:FriendlyName="time_key" msprop:DbColumnName="time_key" msprop:design-time-name="602bf62f-21f1-45ff-9286-00ecb40cdde2" type="xs:anyType" />
+                  <xs:element name="station_status" msprop:FriendlyName="station_status" msprop:DbColumnName="station_status" msprop:design-time-name="3df480b0-f7c1-4a8c-a963-806951974abc">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="weather_condition" msprop:FriendlyName="weather_condition" msprop:DbColumnName="weather_condition" msprop:design-time-name="2c6faff9-c703-4682-aba7-ba28c4b844cf">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="local_event" msprop:FriendlyName="local_event" msprop:DbColumnName="local_event" msprop:design-time-name="817981c0-123c-4202-8d90-916beb8bfe31">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="utilization_level" msprop:FriendlyName="utilization_level" msprop:DbColumnName="utilization_level" msprop:design-time-name="7bda143b-2422-42f5-87bb-6c8a3c5cd517">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ports_available" msprop:FriendlyName="ports_available" msprop:DbColumnName="ports_available" msprop:design-time-name="17918ba9-5456-4acf-a1a8-624087c67b3d" type="xs:int" />
+                  <xs:element name="ports_occupied" msprop:FriendlyName="ports_occupied" msprop:DbColumnName="ports_occupied" msprop:design-time-name="5a48be1e-8295-4d3f-bc8b-e52339d2e0df" type="xs:int" />
+                  <xs:element name="ports_out_of_service" msprop:FriendlyName="ports_out_of_service" msprop:DbColumnName="ports_out_of_service" msprop:design-time-name="90c414b2-2fd0-4a8b-97f5-c2a60bba6106" type="xs:int" />
+                  <xs:element name="utilization_rate" msprop:FriendlyName="utilization_rate" msprop:DbColumnName="utilization_rate" msprop:design-time-name="a00c828d-02f3-4151-8703-7ca46e1ef872" type="xs:decimal" />
+                  <xs:element name="estimated_wait_time_mins" msprop:FriendlyName="estimated_wait_time_mins" msprop:DbColumnName="estimated_wait_time_mins" msprop:design-time-name="81ec2cdf-27b8-466e-a0b2-4afd82d8c3b1" type="xs:decimal" />
+                  <xs:element name="avg_session_duration_mins" msprop:FriendlyName="avg_session_duration_mins" msprop:DbColumnName="avg_session_duration_mins" msprop:design-time-name="cdeca9b8-5549-4cf7-941c-cbbfc3360d09" type="xs:decimal" />
+                  <xs:element name="current_price" msprop:FriendlyName="current_price" msprop:DbColumnName="current_price" msprop:design-time-name="4f7ccb8d-b45f-4d79-acdf-243ce6cbd5d4" type="xs:decimal" />
+                  <xs:element name="temperature_f" msprop:FriendlyName="temperature_f" msprop:DbColumnName="temperature_f" msprop:design-time-name="078a467f-f0a2-461a-b082-c48424d3f8ab" type="xs:decimal" />
+                  <xs:element name="precipitation_mm" msprop:FriendlyName="precipitation_mm" msprop:DbColumnName="precipitation_mm" msprop:design-time-name="6fa9f453-b644-45c9-90a0-2a24b2f813bc" type="xs:decimal" />
+                  <xs:element name="gas_price_per_gallon" msprop:FriendlyName="gas_price_per_gallon" msprop:DbColumnName="gas_price_per_gallon" msprop:design-time-name="869a4704-9a90-4da2-a465-294cf224390e" type="xs:decimal" />
+                  <xs:element name="traffic_congestion_index" msprop:FriendlyName="traffic_congestion_index" msprop:DbColumnName="traffic_congestion_index" msprop:design-time-name="5ae28024-1f83-434e-8261-3ef1d0dc1360" type="xs:decimal" />
+                  <xs:element name="lost_demand_ports" msprop:FriendlyName="lost_demand_ports" msprop:DbColumnName="lost_demand_ports" msprop:design-time-name="3e802447-bc49-4ed7-99cf-fd9bb1e66851" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_date" />
+          <xs:field xpath="date_key" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_station_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_station" />
+          <xs:field xpath="station_key" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_time_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_time" />
+          <xs:field xpath="time_key" />
+        </xs:unique>
+        <xs:unique name="dbo_fact_ev_charging_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_fact_ev_charging" />
+          <xs:field xpath="fact_id" />
+        </xs:unique>
+        <xs:keyref name="fk_fact_station" refer="dbo_dim_station_Constraint1">
+          <xs:selector xpath=".//dbo_fact_ev_charging" />
+          <xs:field xpath="station_key" />
+        </xs:keyref>
+        <xs:keyref name="fk_fact_date" refer="Constraint1">
+          <xs:selector xpath=".//dbo_fact_ev_charging" />
+          <xs:field xpath="date_key" />
+        </xs:keyref>
+        <xs:keyref name="fk_fact_time" refer="dbo_dim_time_Constraint1">
+          <xs:selector xpath=".//dbo_fact_ev_charging" />
+          <xs:field xpath="time_key" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <EV_x0020_Charging_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>

@@ -1,0 +1,409 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4693e0ac-bf51-4833-a220-be515d5ef757" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Station</ID>
+  <Name>Dim Station</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1472" scrolltop="-5747" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6392" y="16320" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_station" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3408" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000500d0000da120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_station" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1472</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5747</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="164">
+            <Shape Id="Station Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Station Key" />
+                <Attribute Id="Charger Type" />
+                <Attribute Id="Network" />
+                <Attribute Id="Ports Total" />
+                <Attribute Id="Power Output Kw" />
+                <Attribute Id="Pricing Type" />
+                <Attribute Id="Station Id" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Location Type" Expanded="false">
+              <Attributes>
+                <Attribute Id="Location Type" />
+              </Attributes>
+              <Position x="230" y="20" />
+            </Shape>
+            <Shape Id="City" Expanded="false">
+              <Attributes>
+                <Attribute Id="City" />
+              </Attributes>
+              <Position x="230" y="69" />
+            </Shape>
+            <Shape Id="State" Expanded="false">
+              <Attributes>
+                <Attribute Id="State" />
+              </Attributes>
+              <Position x="440" y="69" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="1b4ff778-1bb2-49b0-a7a9-304b9a750c6c">
+    <DataSourceViewID>EV Charging DW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="58c6c999-dc23-49ee-b73e-982a6bdf79cb">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="5bf8a017-8d45-4e69-8090-128cf4c8cae0">
+      <ID>Station Key</ID>
+      <Name>Station</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a25d54f4-65f0-43c9-ac0c-8eb8090c9392">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="57a3843c-84a9-42c4-b366-5f96c7fa2637">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>station_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8efd4a72-20ce-4a6c-9949-a285b15ed9f6">
+        <DataType>WChar</DataType>
+        <DataSize>150</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5a2b5eb8-d341-4896-a225-50d53f932253">
+          <TableID>dbo_dim_station</TableID>
+          <ColumnID>station_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="3ac78959-ea89-4139-8b8a-68e6e4858bab">
+          <AttributeID>Station Id</AttributeID>
+          <Name>Station Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="41a29bee-9afc-48a7-849c-4d0c6d52850c">
+          <AttributeID>Network</AttributeID>
+          <Name>Network</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4307139a-a000-4fe8-be39-044776c818d4">
+          <AttributeID>City</AttributeID>
+          <Name>City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6c708e66-e7a0-449e-a10a-58656c6ae329">
+          <AttributeID>Location Type</AttributeID>
+          <Name>Location Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5960d300-f882-43f6-b561-04a9c8c8ca2b">
+          <AttributeID>Charger Type</AttributeID>
+          <Name>Charger Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e462d7cd-e494-4cb2-abee-90597cfc6138">
+          <AttributeID>Power Output Kw</AttributeID>
+          <Name>Power Output Kw</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="18b4bcdb-144c-4c6e-a858-c05b7dfe5ce8">
+          <AttributeID>Ports Total</AttributeID>
+          <Name>Ports Total</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="106caaba-871f-41d4-ba9a-e17a576573cc">
+          <AttributeID>Pricing Type</AttributeID>
+          <Name>Pricing Type</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9ecade4a-44f5-4f83-9a7f-62afe502d78c">
+      <ID>Station Id</ID>
+      <Name>Station Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="14e6ea12-ac28-4134-a11e-a626ff499de3">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a72231f7-9c2f-4180-b70c-28e898d57b1d">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>station_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="636c9618-6b3d-4d1f-a1f7-a307f2635de5">
+      <ID>Network</ID>
+      <Name>Network</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2b57eee8-b23e-4bc5-a28a-3e6782e70672">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9677235f-4274-4816-a2cb-c149828fb16d">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>network</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fb07223a-9d0c-4697-a562-478a908cd82b">
+      <ID>City</ID>
+      <Name>City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="08ad19d9-34a5-4cd1-a7a5-2c58335697e8">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e36116ad-a589-4018-a699-8ff0f2d71383">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>city</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ff176991-1e3e-484b-ab17-1122c056410c">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8276a133-2af0-4d8c-8fa2-c7d162fa139c">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>state</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3c82996d-c83e-48be-b5b2-c66b10948768">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5ec41621-f4a4-4ee7-bb6b-95283003ca66">
+          <TableID>dbo_dim_station</TableID>
+          <ColumnID>city</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1bdf8384-743b-4d25-b0a4-ba9e9cfff65c">
+          <AttributeID>State</AttributeID>
+          <Name>State</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2d06fc8a-2fd8-4835-bcc3-697500dd39db">
+      <ID>State</ID>
+      <Name>State</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="04a8ba97-f7d7-4714-bff9-43bb22bd3460">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="91eb7f77-a72f-4faa-9b76-a481afe6fb19">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>state</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1e620203-101f-4603-9ce3-92519780c1f3">
+        <DataType>WChar</DataType>
+        <DataSize>2</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d3bef6ef-e923-4590-a243-b4803a23379f">
+          <TableID>dbo_dim_station</TableID>
+          <ColumnID>state</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6b514743-49d4-4fa5-af97-ab709bb4158a">
+      <ID>Location Type</ID>
+      <Name>Location Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="061c96a9-67a2-4fd6-a77e-52e95bf6f0e5">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6114c04e-bc69-49f0-b52f-2a8b8e40906a">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>location_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="2505da60-128e-40a2-b019-a2e8309e345f">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="51aafe9d-123d-4669-a54f-76354f7123a0">
+          <TableID>dbo_dim_station</TableID>
+          <ColumnID>location_type</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="44e0d363-b84c-4842-b900-10a8ff453287">
+      <ID>Charger Type</ID>
+      <Name>Charger Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f175dcef-b5a8-4d47-8243-47f27dccfb5a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ec56d037-2a44-40cd-bd7f-db116cf4ce7d">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>charger_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="80bd2c1c-1093-4669-bf0e-37d48a8f80be">
+      <ID>Power Output Kw</ID>
+      <Name>Power Output Kw</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7098e6e2-3b21-4147-9658-9207a3aa90bc">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af26c7e5-68c2-4fb5-92d5-6ab198d48014">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>power_output_kw</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="daad5a16-039c-4502-90ff-c2e7eb50a056">
+      <ID>Ports Total</ID>
+      <Name>Ports Total</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1d2e8a00-e509-401b-a1a4-3387e98eade7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9155807d-26f0-40dc-995d-6fd1d6354ac6">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>ports_total</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="55af767c-7f9a-47e5-bc42-f8601ed4cb6a">
+      <ID>Pricing Type</ID>
+      <Name>Pricing Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="73d3c3c5-4b1d-47d6-932f-2429ef980dfb">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0a310581-8cbe-41d9-b172-7fd05cd40dc3">
+            <TableID>dbo_dim_station</TableID>
+            <ColumnID>pricing_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="601aa162-2524-4158-a514-9b7647ea87e3">
+      <ID>Hierarchy</ID>
+      <Name>Geography</Name>
+      <Levels>
+        <Level dwd:design-time-name="6424871b-10ea-4b64-b6d7-e2cb9d3bf14a">
+          <ID>State</ID>
+          <Name>State</Name>
+          <SourceAttributeID>State</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e7179b1f-13f3-4b3a-ac46-46dc8dbdf701">
+          <ID>City</ID>
+          <Name>City</Name>
+          <SourceAttributeID>City</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="566f8165-13c6-4593-ae66-53fe44f746ae">
+          <ID>Station</ID>
+          <Name>Station</Name>
+          <SourceAttributeID>Station Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="9e4c7e24-0087-4394-b999-15c1ab869e43">
+      <ID>Hierarchy 1</ID>
+      <Name>Location-Station</Name>
+      <Levels>
+        <Level dwd:design-time-name="a5941d48-f310-4d92-84a6-6aa8c2e3e2fe">
+          <ID>Location Type</ID>
+          <Name>Location Type</Name>
+          <SourceAttributeID>Location Type</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="7422e362-a6ee-4a95-acd5-7cbcf3ae3394">
+          <ID>Station</ID>
+          <Name>Station</Name>
+          <SourceAttributeID>Station Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
