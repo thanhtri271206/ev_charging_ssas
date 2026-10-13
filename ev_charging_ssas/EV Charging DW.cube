@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4a990ad0-d310-4f29-b896-63101171757c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="78773c44-6b99-4a6a-b6c2-01b6e3e16972" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>EV Charging DW</ID>
   <Name>EV Charging DW</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -10,7 +10,7 @@
         <dds xmlns="">
           <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3689" scrolltop="4914" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="86" x="21167" y="16320" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -158,136 +158,148 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="2fc13916-ad98-4135-b488-43b50bb2d6b9">
+    <Dimension dwd:design-time-name="ab23b4de-c8fd-423a-b255-acee939b1ab4">
       <ID>Fact Ev Charging</ID>
       <Name>Fact Ev Charging</Name>
       <DimensionID>Fact Ev Charging</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="9d91dbc1-597f-4945-9308-543ddd9554cd">
+        <Attribute dwd:design-time-name="e671cac5-47b5-4066-b685-fa2fd5aa318b">
           <AttributeID>Fact Id</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="9af190e9-d0ae-4593-8a3e-c606b1a3ee67">
+        <Attribute dwd:design-time-name="a3e3dcba-5521-4240-a36a-ee9cd26dfdad">
           <AttributeID>Time Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5f4a736b-4bd4-4271-8cec-9af63663f6f3">
+        <Attribute dwd:design-time-name="894d8eb9-adff-4298-9c59-d48d75a6e015">
           <AttributeID>Date Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="439b2986-2d5c-493b-8a8c-412d3f98c725">
+        <Attribute dwd:design-time-name="dd6b7c71-7aea-4c8a-9af0-6adbbf2f2377">
           <AttributeID>Station Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e78304a6-a886-4466-81fb-998511aa8184">
+          <AttributeID>Station Status</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30c2a7df-cc9b-4d06-ba27-8c738fc60bc8">
+          <AttributeID>Weather Condition</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="24c0c2d2-779a-40b2-937a-f55cd48a160c">
+          <AttributeID>Local Event</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa35201e-d061-42bc-b738-5f62c617ef3f">
+          <AttributeID>Utilization Level</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="b1c20721-4eb8-4706-87e2-7f96855cb024">
+    <Dimension dwd:design-time-name="59ab9a56-9f72-4fd7-b9ca-a75db58d6cae">
       <ID>Dim Time</ID>
       <Name>Dim Time</Name>
       <DimensionID>Dim Time</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="36961ca4-1605-458d-97d0-c132052c1e33">
+        <Attribute dwd:design-time-name="00a010a0-9b56-41ce-aa43-27974800d5c7">
           <AttributeID>Time Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="c01a5a44-86d0-4d19-a8b8-e6286d8c5924">
+        <Attribute dwd:design-time-name="7bd6a65d-81e9-45ca-8d15-a747d016883a">
           <AttributeID>Hour Of Day</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="569b01f2-304e-46aa-835e-7494f4c532e3">
+        <Attribute dwd:design-time-name="33ba9924-1344-43c0-a854-f857a452b950">
           <AttributeID>Minute</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="c5a7bd77-fd87-4025-9901-90ffbd0c0fb3">
+        <Attribute dwd:design-time-name="957f2e00-84f8-4b5b-980d-5c19d848ebe5">
           <AttributeID>Is Peak Hour</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="6730f207-7116-419e-92b4-3834ca0a361c">
+        <Attribute dwd:design-time-name="61317878-3c80-4331-8335-a6077714dd19">
           <AttributeID>Price Period</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="a33c83ad-b62a-429a-80ad-b2027609b9f6">
+        <Hierarchy dwd:design-time-name="7ec8118e-2955-4f3f-abd8-1144f12add11">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="2ee8b277-cbe8-4e99-8fdb-4f639a41034a">
+    <Dimension dwd:design-time-name="3456ff41-55d3-42b0-8903-ef105c124583">
       <ID>Dim Date</ID>
       <Name>Dim Date</Name>
       <DimensionID>Dim Date</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="31f19d76-927d-47e8-9c4e-aedf00973167">
+        <Attribute dwd:design-time-name="20e58af0-f27f-4d61-a131-3fc79125a04b">
           <AttributeID>Date Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="139ffbff-75c8-481d-9154-177a7afbfe40">
+        <Attribute dwd:design-time-name="77e234d1-cc97-4ff9-ac9e-0af2cd3fb046">
           <AttributeID>Day Of Week</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="e87ca192-bc0a-4a2e-96c5-2c29b261f272">
+        <Attribute dwd:design-time-name="075239b4-b895-490c-bea4-7d0befd180fe">
           <AttributeID>Day Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="f33a1cd2-4803-4027-a089-d3e070da38ab">
+        <Attribute dwd:design-time-name="f8d170d3-7f87-4da3-983b-e0b7a12af6b0">
           <AttributeID>Month</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="1d3e575d-b778-4d1a-b37b-cadb6b61df7b">
+        <Attribute dwd:design-time-name="bf39774b-ca2c-4d23-8a13-9e6a0fd85c90">
           <AttributeID>Month Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="f7645053-bcc7-45bc-850b-92a92566e8c6">
+        <Attribute dwd:design-time-name="47720b84-3123-4e21-8851-ac715f115e38">
           <AttributeID>Quarter</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="2cf81da7-8747-4cec-bb99-e99e36909eb1">
+        <Attribute dwd:design-time-name="bd558eeb-8781-468a-a93d-ca6054d0de30">
           <AttributeID>Year</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="794cc19b-72f9-422e-a4bb-08d2a16584c5">
+        <Attribute dwd:design-time-name="a6b74f5c-a08f-4766-a9fc-f740eb69df02">
           <AttributeID>Is Weekend</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="5cc6f40c-b434-4a1a-9264-73a9db702c4b">
+        <Hierarchy dwd:design-time-name="4cedbcde-a378-42d6-843f-d6b68e317efd">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="5263856f-105c-4aa1-bd82-1fea5bd4e7c0">
+    <Dimension dwd:design-time-name="31f9af3b-82e2-4fa0-9812-5219d17a104c">
       <ID>Dim Station</ID>
       <Name>Dim Station</Name>
       <DimensionID>Dim Station</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="b86f196d-a68f-41b2-8be2-dd4504ef3e32">
+        <Attribute dwd:design-time-name="7f6161ca-a496-4c2e-8a81-654c5140b106">
           <AttributeID>Station Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="bf78331e-ca1e-4518-a238-8e79d1b77590">
+        <Attribute dwd:design-time-name="66efc4aa-bfe1-4ed8-bace-a4a053d6f0ed">
           <AttributeID>Station Id</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="a461aab3-4469-4784-97ec-d908f0bfe80f">
+        <Attribute dwd:design-time-name="64e5d0b4-a9cb-4826-8b48-dcf3b58d64ab">
           <AttributeID>Network</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="2cdcab28-8c10-4d88-89bb-0d9edd9012ff">
+        <Attribute dwd:design-time-name="040ae863-051f-4274-b26f-e014f63cb6f3">
           <AttributeID>City</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="a2749927-c0e6-426c-8904-4c9e8012dfff">
+        <Attribute dwd:design-time-name="d920ef1c-372b-446c-a618-23563efe160e">
           <AttributeID>State</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="d6a11912-e367-4670-9b5e-11a5247f15e9">
+        <Attribute dwd:design-time-name="16fcf81a-9771-401a-9338-b1b961186628">
           <AttributeID>Location Type</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="27b02591-98c3-4971-acd8-27e76bd12ba3">
+        <Attribute dwd:design-time-name="b4e8f44f-6453-4a00-a797-7344cb4dbbe1">
           <AttributeID>Charger Type</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="418adcee-af5f-44d6-892d-e7830529e4d5">
+        <Attribute dwd:design-time-name="2235c840-9037-4810-a1c8-b5dd2fa7fa94">
           <AttributeID>Power Output Kw</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="27b0e1c7-7753-4d0d-bc0d-f4818b2d1c31">
+        <Attribute dwd:design-time-name="844cf5c7-0736-4ab6-8e2b-fc8147c5e613">
           <AttributeID>Ports Total</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="ab3dc142-e0cc-4e82-8f61-ccad6f1a0499">
+        <Attribute dwd:design-time-name="e510b45c-b7fc-45f6-915d-f9e1fdf3dc35">
           <AttributeID>Pricing Type</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="9a92d6a1-2b82-4bed-a9ea-9eb6a1dedaef">
+        <Hierarchy dwd:design-time-name="593b3221-bcd3-4a0c-a940-a34b419b7096">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
-        <Hierarchy dwd:design-time-name="326077e7-d3ee-4b9b-a029-bf76e8f42d5d">
+        <Hierarchy dwd:design-time-name="9407b24d-9ec3-46d7-aef4-e23613257cea">
           <HierarchyID>Hierarchy 1</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="710ea296-abed-422f-ac86-e27d2e4ace59">
+    <MeasureGroup dwd:design-time-name="414e13e3-1b22-486f-a29c-e2ce48f82503">
       <ID>Fact Ev Charging</ID>
       <Name>Fact Ev Charging</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -295,146 +307,146 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="88726b4f-c85c-4bd0-ad6b-4204d8e93542">
+        <Measure dwd:design-time-name="a3177796-2de2-4acf-ab29-60638e6a8219">
           <ID>Ports Available</ID>
           <Name>Ports Available</Name>
-          <Source dwd:design-time-name="d1cb1e42-dfc5-430f-a917-d51f3f214120">
+          <Source dwd:design-time-name="0da36b2a-a0ec-4f14-9f11-9f849afd51e4">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="44aab819-3061-416d-bf69-c54b85adb152">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="20c1bd7f-6acf-445d-9e91-647cee541073">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>ports_available</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="ca17e011-77b9-4f88-9095-1e322a29c4bc">
+        <Measure dwd:design-time-name="a04bc662-e999-4dd5-b705-e5e20ba32ae5">
           <ID>Ports Occupied</ID>
           <Name>Ports Occupied</Name>
-          <Source dwd:design-time-name="8fb319d1-309d-4df0-8aad-303aa0dc1e3d">
+          <Source dwd:design-time-name="e39bea23-4b18-4cbd-ad5e-db426a499b9d">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="31ca0aba-1b47-47e1-be80-4e7d4ebc74a8">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="04221c7f-1f8f-4951-87f2-9a20fddfb81f">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>ports_occupied</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="e1df3b63-bf5f-44d8-8454-f3d3e7a11855">
+        <Measure dwd:design-time-name="df4c627c-66ab-4418-a004-f721def0e7d4">
           <ID>Ports Out Of Service</ID>
           <Name>Ports Out Of Service</Name>
-          <Source dwd:design-time-name="2ace667d-1314-41e8-b880-d298f4e6b2ad">
+          <Source dwd:design-time-name="995c4469-45af-4963-a15b-67d5aecb4070">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="2a4cc9a9-6c05-4ab7-90b5-bb4fa1acbc3c">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="020c1934-0592-4941-ad8d-622839ecdf75">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>ports_out_of_service</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="17dd810b-55d0-44b6-bb91-910ef6dda284">
+        <Measure dwd:design-time-name="bb1b5cc6-817e-4d2b-bd72-623d4610e57b">
           <ID>Utilization Rate</ID>
           <Name>Utilization Rate</Name>
-          <Source dwd:design-time-name="dc7d2313-43be-432a-964b-c69ada5e877b">
+          <Source dwd:design-time-name="3ebd54e7-ec2f-48fd-a97b-efc2bd44f29e">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="aea59ff8-e2a5-4cb1-8d07-36d25c2fc681">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ab7a9689-49dc-4fc7-b461-c17509216076">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>utilization_rate</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="44fef21f-9b67-4f34-a20b-cbc72cef9c3c">
+        <Measure dwd:design-time-name="286d2138-2b98-4a52-91f1-540c314e658c">
           <ID>Estimated Wait Time Mins</ID>
           <Name>Estimated Wait Time Mins</Name>
-          <Source dwd:design-time-name="689524d6-c306-4b00-8ada-014cf994b6eb">
+          <Source dwd:design-time-name="f51635ff-51d4-45d0-aabf-b755231e8109">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="5ce21b85-41fa-43c5-90dc-396cf2b663f5">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cfae65a7-572c-4fa8-83c7-75cd3f9923db">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>estimated_wait_time_mins</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="8194a22f-e8e9-411a-8cd7-22e98cbc3ebc">
+        <Measure dwd:design-time-name="cf715426-6c4c-4aac-a61a-e8277131aec9">
           <ID>Avg Session Duration Mins</ID>
           <Name>Avg Session Duration Mins</Name>
-          <Source dwd:design-time-name="61ac4537-1dd3-4778-a812-2733ef4ccfe4">
+          <Source dwd:design-time-name="069638d2-8744-430d-8f3c-995db5e7729e">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="8d4d68c9-de7e-473b-be88-a97bf1d934e6">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1a86c864-a897-4b4d-b76a-dcc3578a0e83">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>avg_session_duration_mins</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="b1e25c67-ed8b-4f12-a777-fae625bf39e1">
+        <Measure dwd:design-time-name="1e22d6ca-f5dc-4148-96c4-e4be8f8e9762">
           <ID>Current Price</ID>
           <Name>Current Price</Name>
-          <Source dwd:design-time-name="0e333794-ebbd-4f72-8cc0-acee7a0d2baa">
+          <Source dwd:design-time-name="688326bd-61f2-48bc-bd8f-4f350ebb484a">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="a0b169d9-6567-4772-b2c3-a84405fa7e7e">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a4ca3760-b7ca-4668-b15c-e9356618bfa8">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>current_price</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="9a899a88-5ffb-42cc-ae2e-535b69f9d9fd">
+        <Measure dwd:design-time-name="ebd78531-f722-4fc2-a3dc-09714e67ecad">
           <ID>Temperature F</ID>
           <Name>Temperature F</Name>
-          <Source dwd:design-time-name="a949ffb1-fd46-450a-bcb6-4432ff1b0941">
+          <Source dwd:design-time-name="e620fcf7-843a-44d0-8a19-9bdd747e88c4">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="1ba3b9f5-f332-4328-9ff5-0ea1c1839ab0">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7c894cc4-54d8-4838-acd4-d7f3ced17683">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>temperature_f</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="7052f7c6-fcdd-4dcd-a7df-6ce4f5dda25f">
+        <Measure dwd:design-time-name="8dcd6783-7bb1-407d-8349-921d76c9a92e">
           <ID>Precipitation Mm</ID>
           <Name>Precipitation Mm</Name>
-          <Source dwd:design-time-name="ed1a8402-13a6-49c9-b3bd-a47eddc5aa76">
+          <Source dwd:design-time-name="fbf1f3d0-56b4-4f29-9743-40bf7adaa8b2">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="e73ef408-8345-461d-8aa9-ebb9904c14bf">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a11431e3-733e-429a-a3ab-cd7bda65e627">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>precipitation_mm</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="938aba2b-05cf-43e4-a0ae-ae10b3861379">
+        <Measure dwd:design-time-name="006422a2-2b6e-41b4-98b2-9b8ed1ffaee6">
           <ID>Gas Price Per Gallon</ID>
           <Name>Gas Price Per Gallon</Name>
-          <Source dwd:design-time-name="d0a9d68a-f2f0-4053-9e49-01a4fcb0505e">
+          <Source dwd:design-time-name="e3d9c19e-920f-4c6e-939f-3ee89e59b7c5">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="fe8fe7e1-296e-4454-8883-d7eed4a73afa">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bbeaa4a1-0d9b-4a8e-9912-c5220a56d141">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>gas_price_per_gallon</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="45057d64-32a6-4237-bd4a-98ab839fe34f">
+        <Measure dwd:design-time-name="32c07954-da5e-46db-8162-28381b8270a0">
           <ID>Traffic Congestion Index</ID>
           <Name>Traffic Congestion Index</Name>
-          <Source dwd:design-time-name="be6f37cc-62e3-486b-89f6-097bfaffd6e4">
+          <Source dwd:design-time-name="53386ec3-b394-4a3b-b805-e85cedcc3759">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="5f08742c-9cee-4e11-af0c-b7e737abb988">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="dfc22cbc-a67f-483b-9053-48e8f29cbf16">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>traffic_congestion_index</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="ae979c4f-36f5-41f7-b4b7-c6207e425e22">
+        <Measure dwd:design-time-name="708c2b42-7202-4cc0-bf99-0b6448dd2b63">
           <ID>Lost Demand Ports</ID>
           <Name>Lost Demand Ports</Name>
-          <Source dwd:design-time-name="7c9f88fe-41ff-401f-aeae-b332f3ce32ea">
+          <Source dwd:design-time-name="a0945b1a-be90-409e-9923-4177adacf663">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="39eb911d-a003-4b78-986c-79824b468dc3">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bb59fc34-137d-4667-afdf-7e9447e01437">
               <TableID>dbo_fact_ev_charging</TableID>
               <ColumnID>lost_demand_ports</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="707e81e4-8647-4082-a1cf-05a3fda52af6">
+        <Measure dwd:design-time-name="f3c6e426-bff1-437a-8f77-4a451d067e68">
           <ID>Fact Ev Charging Count</ID>
           <Name>Fact Ev Charging Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="41f92a46-2883-4f06-ab99-11f9a28e1da4">
+          <Source dwd:design-time-name="0ef5a13d-438a-442a-89a1-11f8ca84c4b0">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="627a5dee-4d5e-40ec-bc3d-f1b19ee30af1">
+            <Source xsi:type="RowBinding" dwd:design-time-name="59801293-e0ca-48f9-9228-38741dbb7471">
               <TableID>dbo_fact_ev_charging</TableID>
             </Source>
           </Source>
@@ -443,15 +455,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="16b66f48-f4b5-4edb-84b4-66b55e045eb9">
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="65733d2a-850f-423d-be68-e5f3a8aa2c1e">
           <CubeDimensionID>Fact Ev Charging</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="6f82cfb5-7155-41b4-9845-b6358528f845">
+            <Attribute dwd:design-time-name="338f0204-a8ec-4ae8-b718-dd109257077c">
               <AttributeID>Fact Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="ebbab402-fb6f-4ffe-9494-8cbba7f0f18b">
+                <KeyColumn dwd:design-time-name="7a51ce16-986c-4d5e-a277-da5caf0bbb23">
                   <DataType>BigInt</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="adcbf1cd-98b6-41f8-a8a4-73004734fde6">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="01e96038-8cd8-4038-84ac-df9a8dde57ae">
                     <TableID>dbo_fact_ev_charging</TableID>
                     <ColumnID>fact_id</ColumnID>
                   </Source>
@@ -461,15 +473,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7b3ecff2-0116-4460-b0ff-04fe2f67a733">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a4823556-2fb5-4e8f-9f18-5f510635371d">
           <CubeDimensionID>Dim Time</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="503eadff-aeaa-4564-b74c-6bc4494304cf">
+            <Attribute dwd:design-time-name="3876491f-b7d8-4182-8440-f192a7931b73">
               <AttributeID>Time Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="a405d48d-2d30-434a-92db-af02872867bf">
+                <KeyColumn dwd:design-time-name="ef768690-372b-473c-8df5-1c1b2d428c41">
                   <DataType>WChar</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="25bad108-55b0-4c02-9388-efd509e41256">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e6478034-8f56-4593-a5ad-e29e44af115b">
                     <TableID>dbo_fact_ev_charging</TableID>
                     <ColumnID>time_key</ColumnID>
                   </Source>
@@ -479,15 +491,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0815bbae-2e9b-4b16-abdc-0b9628187445">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ec5830e0-97a4-4a62-a515-3b34f63292f5">
           <CubeDimensionID>Dim Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="6d7714da-cf19-45c8-a034-785d8917cd53">
+            <Attribute dwd:design-time-name="57ef6fc3-b798-4757-b6bc-4a4be741ce2a">
               <AttributeID>Date Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="a6f112d2-9a00-4781-a61d-9878afa7cc8e">
+                <KeyColumn dwd:design-time-name="7a6adc33-365c-4910-bfd6-f1decba22bab">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f251015b-7906-4665-ae23-775550c21ac0">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="902e6d59-015c-484f-a05b-e1f81ba18d25">
                     <TableID>dbo_fact_ev_charging</TableID>
                     <ColumnID>date_key</ColumnID>
                   </Source>
@@ -497,15 +509,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="600c7647-eb1f-4e69-9689-2a2e06f21fd2">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b2241f11-823b-433e-8c1e-2588291928f8">
           <CubeDimensionID>Dim Station</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="6be39e99-dc92-4dc3-aed6-6ff46c8f1b61">
+            <Attribute dwd:design-time-name="aa415377-c629-446a-8ac0-eecd9c23d267">
               <AttributeID>Station Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="6a42daf8-f5a1-47d5-88cf-1cf3635e719a">
+                <KeyColumn dwd:design-time-name="08eab8db-f682-485e-975f-33225f5712c1">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="51377726-0859-48a2-a2b0-0a81c7a5044f">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1123a905-92b8-4994-b7b4-29e45eccf826">
                     <TableID>dbo_fact_ev_charging</TableID>
                     <ColumnID>station_key</ColumnID>
                   </Source>
@@ -516,51 +528,58 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="1aac4ee2-ff11-4740-ba44-47a365a96e80">
+  <Source dwd:design-time-name="3b06f340-35ad-4aaa-9df8-d992c5dfa4c9">
     <DataSourceViewID>EV Charging DW</DataSourceViewID>
   </Source>
   <MdxScripts>
-    <MdxScript dwd:design-time-name="acafcabe-0401-4ba1-b06b-f91721747233">
+    <MdxScript dwd:design-time-name="5bf85e14-5dfe-4ccd-abf8-194b6a25da97">
       <ID>MdxScript</ID>
       <Name>MdxScript</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
       <Commands>
         <Command>
-          <Text>/* ===== S1. Measure cơ bản ===== */
+          <Text>CALCULATE;
+
+/* ===== S1. Measure co ban ===== */
 CREATE MEMBER CURRENTCUBE.[Measures].[Avg Utilization] AS
-    IIF([Measures].[Fact Count] = 0, NULL, [Measures].[Sum Utilization] / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Utilization Rate] / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Avg Wait] AS
-    IIF([Measures].[Fact Count] = 0, NULL, [Measures].[Sum Wait] / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Estimated Wait Time Mins] / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.00", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Avg Session] AS
-    IIF([Measures].[Fact Count] = 0, NULL, [Measures].[Sum Session] / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Avg Session Duration Mins] / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.0", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Avg Price] AS
-    IIF([Measures].[Fact Count] = 0, NULL, [Measures].[Sum Price] / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Current Price] / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Avg Gas] AS
-    IIF([Measures].[Fact Count] = 0, NULL, [Measures].[Sum Gas] / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Gas Price Per Gallon] / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Avg Temperature] AS
-    IIF([Measures].[Fact Count] = 0, NULL, [Measures].[Sum Temperature] / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Temperature F] / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.0", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Avg Precipitation] AS
-    IIF([Measures].[Fact Count] = 0, NULL, [Measures].[Sum Precipitation] / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Precipitation Mm] / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Avg Traffic] AS
-    IIF([Measures].[Fact Count] = 0, NULL, [Measures].[Sum Traffic] / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Traffic Congestion Index] / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.000", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Avg Ports Available] AS
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL, [Measures].[Ports Available] / [Measures].[Fact Ev Charging Count]),
+    FORMAT_STRING = "0.00", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[OOS Rate] AS
     IIF(([Measures].[Ports Occupied] + [Measures].[Ports Available] + [Measures].[Ports Out Of Service]) = 0, NULL,
@@ -569,8 +588,9 @@ CREATE MEMBER CURRENTCUBE.[Measures].[OOS Rate] AS
     FORMAT_STRING = "0.00%", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Surge Exposure %] AS
-    IIF([Measures].[Fact Count] = 0, NULL,
-        ([Utilization Level].[Utilization Level].&amp;[4-Near Capacity], [Measures].[Fact Count]) / [Measures].[Fact Count]),
+    IIF([Measures].[Fact Ev Charging Count] = 0, NULL,
+        ([Fact Ev Charging].[Utilization Level].&amp;[Near Capacity], [Measures].[Fact Ev Charging Count])
+        / [Measures].[Fact Ev Charging Count]),
     FORMAT_STRING = "0.00%", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Lost Port-Hours] AS
@@ -582,46 +602,44 @@ CREATE MEMBER CURRENTCUBE.[Measures].[Lost Demand %] AS
         [Measures].[Lost Demand Ports] / ([Measures].[Lost Demand Ports] + [Measures].[Ports Occupied])),
     FORMAT_STRING = "0.00%", VISIBLE = 1;
 
+CREATE MEMBER CURRENTCUBE.[Measures].[Network Share In State] AS
+    IIF(([Measures].[Ports Occupied], [Dim Station].[Network].[All]) = 0, NULL,
+        [Measures].[Ports Occupied] / ([Measures].[Ports Occupied], [Dim Station].[Network].[All])),
+    FORMAT_STRING = "0.00%", VISIBLE = 1;
+
 /* ===== S2. Named Set ===== */
 CREATE SET CURRENTCUBE.[Hours Offpeak] AS
-    {[Dim Time].[Hour-Time].[Hour Of Day].&amp;[2] : [Dim Time].[Hour-Time].[Hour Of Day].&amp;[5]},
-    DISPLAY_FOLDER = "Named Sets";
+    {[Dim Time].[Hour Of Day].&amp;[2] : [Dim Time].[Hour Of Day].&amp;[5]};
 CREATE SET CURRENTCUBE.[Hours Morning] AS
-    {[Dim Time].[Hour-Time].[Hour Of Day].&amp;[7] : [Dim Time].[Hour-Time].[Hour Of Day].&amp;[9]},
-    DISPLAY_FOLDER = "Named Sets";
+    {[Dim Time].[Hour Of Day].&amp;[7] : [Dim Time].[Hour Of Day].&amp;[9]};
 CREATE SET CURRENTCUBE.[Hours Midday] AS
-    {[Dim Time].[Hour-Time].[Hour Of Day].&amp;[10] : [Dim Time].[Hour-Time].[Hour Of Day].&amp;[16]},
-    DISPLAY_FOLDER = "Named Sets";
+    {[Dim Time].[Hour Of Day].&amp;[10] : [Dim Time].[Hour Of Day].&amp;[16]};
 CREATE SET CURRENTCUBE.[Hours Evening] AS
-    {[Dim Time].[Hour-Time].[Hour Of Day].&amp;[17] : [Dim Time].[Hour-Time].[Hour Of Day].&amp;[20]},
-    DISPLAY_FOLDER = "Named Sets";
+    {[Dim Time].[Hour Of Day].&amp;[17] : [Dim Time].[Hour Of Day].&amp;[20]};
 
 CREATE SET CURRENTCUBE.[Days Hot Season] AS
-    {[Dim Date].[Calendar].[Date].&amp;[2025-07-01T00:00:00] : [Dim Date].[Calendar].[Date].&amp;[2025-09-30T00:00:00]},
-    DISPLAY_FOLDER = "Named Sets";
+    {[Dim Date].[Date].&amp;[2025-07-01T00:00:00] : [Dim Date].[Date].&amp;[2025-09-30T00:00:00]};
 CREATE SET CURRENTCUBE.[Days Cold Season] AS
-    {[Dim Date].[Calendar].[Date].&amp;[2025-11-01T00:00:00] : [Dim Date].[Calendar].[Date].&amp;[2025-12-30T00:00:00]},
-    DISPLAY_FOLDER = "Named Sets";
+    {[Dim Date].[Date].&amp;[2025-11-01T00:00:00] : [Dim Date].[Date].&amp;[2025-12-30T00:00:00]};
 
 CREATE SET CURRENTCUBE.[Top 3 Cities Q4] AS
     TopCount([Dim Station].[Geography].[City].Members, 3,
-             ([Dim Date].[Calendar].[Quarter].&amp;[4], [Measures].[Avg Utilization])),
-    DISPLAY_FOLDER = "Named Sets";
+             ([Dim Date].[Quarter].&amp;[2025]&amp;[4], [Measures].[Avg Utilization]));
 
-/* ===== S3. Khung giờ, Peak Lift, Peak Premium (Q5) ===== */
+/* ===== S3. Khung gio, Peak Lift, Peak Premium (Q5) ===== */
 CREATE MEMBER CURRENTCUBE.[Measures].[Util Morning Peak] AS
-    IIF(Sum([Hours Morning], [Measures].[Fact Count]) = 0, NULL,
-        Sum([Hours Morning], [Measures].[Sum Utilization]) / Sum([Hours Morning], [Measures].[Fact Count])),
+    IIF(Sum([Hours Morning], [Measures].[Fact Ev Charging Count]) = 0, NULL,
+        Sum([Hours Morning], [Measures].[Utilization Rate]) / Sum([Hours Morning], [Measures].[Fact Ev Charging Count])),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Util Midday] AS
-    IIF(Sum([Hours Midday], [Measures].[Fact Count]) = 0, NULL,
-        Sum([Hours Midday], [Measures].[Sum Utilization]) / Sum([Hours Midday], [Measures].[Fact Count])),
+    IIF(Sum([Hours Midday], [Measures].[Fact Ev Charging Count]) = 0, NULL,
+        Sum([Hours Midday], [Measures].[Utilization Rate]) / Sum([Hours Midday], [Measures].[Fact Ev Charging Count])),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Util Evening Peak] AS
-    IIF(Sum([Hours Evening], [Measures].[Fact Count]) = 0, NULL,
-        Sum([Hours Evening], [Measures].[Sum Utilization]) / Sum([Hours Evening], [Measures].[Fact Count])),
+    IIF(Sum([Hours Evening], [Measures].[Fact Ev Charging Count]) = 0, NULL,
+        Sum([Hours Evening], [Measures].[Utilization Rate]) / Sum([Hours Evening], [Measures].[Fact Ev Charging Count])),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Peak Lift Morning] AS
@@ -633,30 +651,67 @@ CREATE MEMBER CURRENTCUBE.[Measures].[Peak Lift Evening] AS
     FORMAT_STRING = "0.0%", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Price Evening] AS
-    IIF(Sum([Hours Evening], [Measures].[Fact Count]) = 0, NULL,
-        Sum([Hours Evening], [Measures].[Sum Price]) / Sum([Hours Evening], [Measures].[Fact Count])),
+    IIF(Sum([Hours Evening], [Measures].[Fact Ev Charging Count]) = 0, NULL,
+        Sum([Hours Evening], [Measures].[Current Price]) / Sum([Hours Evening], [Measures].[Fact Ev Charging Count])),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Price Offpeak] AS
-    IIF(Sum([Hours Offpeak], [Measures].[Fact Count]) = 0, NULL,
-        Sum([Hours Offpeak], [Measures].[Sum Price]) / Sum([Hours Offpeak], [Measures].[Fact Count])),
+    IIF(Sum([Hours Offpeak], [Measures].[Fact Ev Charging Count]) = 0, NULL,
+        Sum([Hours Offpeak], [Measures].[Current Price]) / Sum([Hours Offpeak], [Measures].[Fact Ev Charging Count])),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Peak Premium %] AS
     IIF([Measures].[Price Offpeak] = 0, NULL, [Measures].[Price Evening] / [Measures].[Price Offpeak] - 1),
     FORMAT_STRING = "0.0%", VISIBLE = 1;
 
-/* ===== S4. Xếp hạng trạm trong thành phố, từ thấp lên cao (Q8) ===== */
+/* ===== S4. Xep hang tram trong thanh pho (Q8) ===== */
 CREATE MEMBER CURRENTCUBE.[Measures].[Station Rank In City] AS
     IIF([Dim Station].[Geography].CurrentMember.Level.Ordinal = 3
         AND NOT IsEmpty([Measures].[Avg Utilization]),
         Rank([Dim Station].[Geography].CurrentMember,
-             Order(NonEmpty([Dim Station].[Geography].CurrentMember.Parent.Children, [Measures].[Fact Count]),
+             Order(NonEmpty([Dim Station].[Geography].CurrentMember.Parent.Children, [Measures].[Fact Ev Charging Count]),
                    [Measures].[Avg Utilization], BASC)),
         NULL),
     FORMAT_STRING = "0", VISIBLE = 1;
 
-/* ===== S5. Tương quan theo ngày (Q12) ===== */
+/* ===== S5. Period-over-Period theo thang (Q7) ===== */
+CREATE MEMBER CURRENTCUBE.[Measures].[Prev Month Utilization] AS
+    (ParallelPeriod([Dim Date].[Calendar].[Month], 1, [Dim Date].[Calendar].CurrentMember),
+     [Measures].[Avg Utilization]),
+    FORMAT_STRING = "0.0000", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[MoM Utilization %] AS
+    IIF([Measures].[Prev Month Utilization] = 0 OR IsEmpty([Measures].[Prev Month Utilization]), NULL,
+        ([Measures].[Avg Utilization] - [Measures].[Prev Month Utilization]) / [Measures].[Prev Month Utilization]),
+    FORMAT_STRING = "0.0%", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Prev Month Gas] AS
+    (ParallelPeriod([Dim Date].[Calendar].[Month], 1, [Dim Date].[Calendar].CurrentMember),
+     [Measures].[Avg Gas]),
+    FORMAT_STRING = "0.000", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[MoM Gas %] AS
+    IIF([Measures].[Prev Month Gas] = 0 OR IsEmpty([Measures].[Prev Month Gas]), NULL,
+        ([Measures].[Avg Gas] - [Measures].[Prev Month Gas]) / [Measures].[Prev Month Gas]),
+    FORMAT_STRING = "0.0%", VISIBLE = 1;
+
+/* ===== S6. Cumulative (Q9) ===== */
+CREATE MEMBER CURRENTCUBE.[Measures].[Cumulative Lost Port-Hours] AS
+    IIF(IsEmpty(Sum(PeriodsToDate([Dim Date].[Calendar].[Year], [Dim Date].[Calendar].CurrentMember),
+                    [Measures].[Lost Demand Ports])), NULL,
+        Sum(PeriodsToDate([Dim Date].[Calendar].[Year], [Dim Date].[Calendar].CurrentMember),
+            [Measures].[Lost Demand Ports]) * 0.5),
+    FORMAT_STRING = "#,##0.0", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Cumulative Lost Demand %] AS
+    IIF(IsEmpty(Sum(PeriodsToDate([Dim Date].[Calendar].[Year], [Dim Date].[Calendar].CurrentMember),
+                    [Measures].[Lost Demand Ports])), NULL,
+        Sum(PeriodsToDate([Dim Date].[Calendar].[Year], [Dim Date].[Calendar].CurrentMember), [Measures].[Lost Demand Ports]) /
+        (Sum(PeriodsToDate([Dim Date].[Calendar].[Year], [Dim Date].[Calendar].CurrentMember), [Measures].[Lost Demand Ports]) +
+         Sum(PeriodsToDate([Dim Date].[Calendar].[Year], [Dim Date].[Calendar].CurrentMember), [Measures].[Ports Occupied]))),
+    FORMAT_STRING = "0.00%", VISIBLE = 1;
+
+/* ===== S7. Tuong quan theo ngay (Q12) ===== */
 CREATE MEMBER CURRENTCUBE.[Measures].[r Traffic Hot] AS
     Correlation([Days Hot Season], [Measures].[Avg Utilization], [Measures].[Avg Traffic]),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
@@ -676,16 +731,49 @@ CREATE MEMBER CURRENTCUBE.[Measures].[r Temp Cold] AS
     Correlation([Days Cold Season], [Measures].[Avg Utilization], [Measures].[Avg Temperature]),
     FORMAT_STRING = "0.0000", VISIBLE = 1;
 
-/* ===== S6. Calculated Member trong dimension (Q12, Q13) ===== */
-CREATE MEMBER CURRENTCUBE.[Weather Condition].[Weather Condition].[Extreme Weather] AS
-    Aggregate({[Weather Condition].[Weather Condition].&amp;[extreme_heat],
-               [Weather Condition].[Weather Condition].&amp;[freezing]}),
-    VISIBLE = 1;
+/* ===== S8. Composite Rank van hanh (Q11) ===== */
+CREATE MEMBER CURRENTCUBE.[Measures].[Rank Util Evening] AS
+    IIF(IsEmpty([Measures].[Util Evening Peak]), NULL,
+        Rank([Dim Station].[Network].CurrentMember,
+             Order(NonEmpty([Dim Station].[Network].[Network].Members, [Measures].[Util Evening Peak]),
+                   [Measures].[Util Evening Peak], BDESC))),
+    FORMAT_STRING = "0", VISIBLE = 1;
 
-CREATE MEMBER CURRENTCUBE.[Local Event].[Local Event].[Has Event] AS
-    Aggregate(Except([Local Event].[Local Event].[Local Event].Members,
-                     {[Local Event].[Local Event].&amp;[no_event]})),
-    VISIBLE = 1;; </Text>
+CREATE MEMBER CURRENTCUBE.[Measures].[Rank Surge] AS
+    IIF(IsEmpty([Measures].[Surge Exposure %]), NULL,
+        Rank([Dim Station].[Network].CurrentMember,
+             Order(NonEmpty([Dim Station].[Network].[Network].Members, [Measures].[Surge Exposure %]),
+                   [Measures].[Surge Exposure %], BDESC))),
+    FORMAT_STRING = "0", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Rank Wait] AS
+    IIF(IsEmpty([Measures].[Avg Wait]), NULL,
+        Rank([Dim Station].[Network].CurrentMember,
+             Order(NonEmpty([Dim Station].[Network].[Network].Members, [Measures].[Avg Wait]),
+                   [Measures].[Avg Wait], BDESC))),
+    FORMAT_STRING = "0", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Composite Rank] AS
+    IIF(IsEmpty([Measures].[Rank Util Evening]) OR IsEmpty([Measures].[Rank Surge]) OR IsEmpty([Measures].[Rank Wait]),
+        NULL,
+        ([Measures].[Rank Util Evening] + [Measures].[Rank Surge] + [Measures].[Rank Wait]) / 3.0),
+    FORMAT_STRING = "0.00", VISIBLE = 1;
+
+/* ===== S9. Period-over-Period theo Quarter (Q14) ===== */
+CREATE MEMBER CURRENTCUBE.[Measures].[Prev Quarter Utilization] AS
+    (ParallelPeriod([Dim Date].[Calendar].[Quarter], 1, [Dim Date].[Calendar].CurrentMember),
+     [Measures].[Avg Utilization]),
+    FORMAT_STRING = "0.0000", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[QoQ Utilization %] AS
+    IIF([Measures].[Prev Quarter Utilization] = 0 OR IsEmpty([Measures].[Prev Quarter Utilization]), NULL,
+        ([Measures].[Avg Utilization] - [Measures].[Prev Quarter Utilization]) / [Measures].[Prev Quarter Utilization]),
+    FORMAT_STRING = "0.0%", VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Prev Quarter OOS] AS
+    (ParallelPeriod([Dim Date].[Calendar].[Quarter], 1, [Dim Date].[Calendar].CurrentMember),
+     [Measures].[OOS Rate]),
+    FORMAT_STRING = "0.00%", VISIBLE = 1;</Text>
         </Command>
       </Commands>
     </MdxScript>

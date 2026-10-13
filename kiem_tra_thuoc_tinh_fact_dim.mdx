@@ -1,0 +1,241 @@
+-- ==============================================================================
+-- BỘ TRUY VẤN KIỂM TRA THUỘC TÍNH FACT DIMENSION (DEGENERATE ATTRIBUTES)
+-- Dự án: EV Charging SSAS
+-- Mục đích: Kiểm tra xem các thuộc tính kéo từ Fact (Station Status, Weather Condition,
+--          Local Event, Utilization Level) có hoạt động đầy đủ như Dimension độc lập
+--          (Slicing, Dicing, Group By, Crossjoin, Calculated Member, Drillthrough) không.
+--
+-- Hướng dẫn:
+-- 1. Mở SSMS -> Connect Analysis Services -> Chọn Database -> New Query -> MDX
+-- 2. Bôi đen từng bài thử nghiệm (Test 1 -> Test 7) rồi nhấn F5 (hoặc Ctrl + E).
+-- ==============================================================================
+
+/* ==============================================================================
+   TEST 1: KIỂM TRA DUYỆT THÀNH VIÊN VÀ PHÂN BỐ BẢN GHI (GROUP BY & COUNT)
+   Mục đích: Xác nhận SSAS nhận diện được danh sách các Member của từng thuộc tính Fact
+   và tổng số dòng khớp 100% với warehouse (1.317.750 bản ghi).
+============================================================================== */
+
+-- 1a. Phân bố theo Mức độ sử dụng (Utilization Level)
+-- Kỳ vọng:
+--   Low           : 558.720 dòng (~42,4%)
+--   Moderate      : 361.080 dòng (~27,4%)
+--   High          : 223.370 dòng (~16,9%)
+--   Near Capacity : 174.580 dòng (~13,2%)
+--   Tổng cộng     : 1.317.750
+SELECT 
+    {[Measures].[Fact Ev Charging Count]} ON 0,
+    NON EMPTY [Fact Ev Charging].[Utilization Level].[Utilization Level].Members ON 1
+FROM [EV Charging DW];
+
+-- 1b. Phân bố theo Trạng thái trạm (Station Status)
+-- Kỳ vọng:
+--   operational        : ~1.172.790 (~89,0%)
+--   partial_outage     : ~60.600 (~4,6%)
+--   under_maintenance  : ~42.360 (~3,2%)
+--   complete_outage    : ~42.000 (~3,2%)
+SELECT 
+    {[Measures].[Fact Ev Charging Count]} ON 0,
+    NON EMPTY [Fact Ev Charging].[Station Status].[Station Status].Members ON 1
+FROM [EV Charging DW];
+
+-- 1c. Phân bố theo Điều kiện thời tiết (Weather Condition)
+-- Kỳ vọng: clear (~869.715), extreme_heat (149.136), freezing (61.647),
+--          heavy_rain (20.734), moderate_rain (~73.188), overcast (~143.330)
+SELECT 
+    {[Measures].[Fact Ev Charging Count]} ON 0,
+    NON EMPTY [Fact Ev Charging].[Weather Condition].[Weather Condition].Members ON 1
+FROM [EV Charging DW];
+
+-- 1d. Phân bố theo Sự kiện địa phương (Local Event)
+-- Kỳ vọng: no_event chiếm đại đa số (1.286.053 dòng), Has Event (31.697 dòng)
+SELECT 
+    {[Measures].[Fact Ev Charging Count]} ON 0,
+    NON EMPTY [Fact Ev Charging].[Local Event].[Local Event].Members ON 1
+FROM [EV Charging DW];
+
+
+/* ==============================================================================
+   TEST 2: TÍNH TOÁN CÁC MEASURE PHỨC HỢP THEO THUỘC TÍNH FACT (AGGREGATION)
+   Mục đích: Kiểm tra các Calculated Measure (Avg Utilization, OOS Rate, Avg Wait,
+   Avg Session) có tính toán chính xác trên từng lát cắt của thuộc tính Fact không.
+============================================================================== */
+
+-- 2a. Mức độ sử dụng, thời gian chờ và thời lượng sạc theo Thời tiết
+-- Kỳ vọng: 
+--   heavy_rain có Avg Utilization sụt giảm rõ rệt (khoảng ~0,366 so với clear ~0,417)
+SELECT 
+    {[Measures].[Fact Ev Charging Count],
+     [Measures].[Avg Utilization],
+     [Measures].[Avg Wait],
+     [Measures].[Avg Session]} ON 0,
+    NON EMPTY [Fact Ev Charging].[Weather Condition].[Weather Condition].Members ON 1
+FROM [EV Charging DW];
+
+-- 2b. Kiểm tra Tỷ lệ hỏng (OOS Rate) và số cổng theo Trạng thái trạm
+-- Kỳ vọng: 
+--   complete_outage: Ports Available = 0, OOS Rate = 100%
+--   operational: OOS Rate = 0%
+SELECT 
+    {[Measures].[Fact Ev Charging Count],
+     [Measures].[Ports Available],
+     [Measures].[Ports Occupied],
+     [Measures].[Ports Out Of Service],
+     [Measures].[OOS Rate]} ON 0,
+    NON EMPTY [Fact Ev Charging].[Station Status].[Station Status].Members ON 1
+FROM [EV Charging DW];
+
+
+/* ==============================================================================
+   TEST 3: CẮT LÁT DỮ LIỆU BẰNG THUỘC TÍNH FACT (SLICING - MỆNH ĐỀ WHERE)
+   Mục đích: Xác nhận có thể dùng thuộc tính Fact làm bộ lọc (Slicer) cho các Dim khác.
+============================================================================== */
+
+-- 3a. Xem kết quả các Mạng sạc (Dim Station) CHỈ trong trạng thái sự cố (partial_outage)
+SELECT 
+    {[Measures].[Fact Ev Charging Count],
+     [Measures].[Avg Utilization],
+     [Measures].[Avg Wait]} ON 0,
+    NON EMPTY [Dim Station].[Network].[Network].Members ON 1
+FROM [EV Charging DW]
+WHERE ([Fact Ev Charging].[Station Status].&[partial_outage]);
+
+-- 3b. Xem kết quả theo Tháng (Dim Date) CHỈ khi trạm ở mức Quá tải (Near Capacity)
+-- Chú ý: Nếu giá trị key là "Near Capacity" hoặc "4-Near Capacity", kiểm tra theo key thực tế
+SELECT 
+    {[Measures].[Fact Ev Charging Count],
+     [Measures].[Avg Utilization]} ON 0,
+    [Dim Date].[Calendar].[Month].Members ON 1
+FROM [EV Charging DW]
+WHERE ([Fact Ev Charging].[Utilization Level].&[Near Capacity]);
+
+
+/* ==============================================================================
+   TEST 4: PHỐI HỢP ĐA CHIỀU (CROSSJOIN) GIỮA THUỘC TÍNH FACT VÀ REGULAR DIMENSION
+   Mục đích: Chứng minh thuộc tính Fact có thể Crossjoin bình đẳng với Dimension chuẩn.
+============================================================================== */
+
+-- 4a. Crossjoin: Loại địa điểm (Dim Station) x Mức thời tiết (Fact Ev Charging)
+-- Dùng để đánh giá thời tiết ảnh hưởng lên Shopping Center, Highway, Workplace ra sao
+SELECT 
+    {[Measures].[Fact Ev Charging Count], [Measures].[Avg Utilization]} ON 0,
+    NON EMPTY Crossjoin(
+        [Dim Station].[Location Type].[Location Type].Members,
+        {[Fact Ev Charging].[Weather Condition].&[clear],
+         [Fact Ev Charging].[Weather Condition].&[heavy_rain],
+         [Fact Ev Charging].[Weather Condition].&[extreme_heat]}
+    ) ON 1
+FROM [EV Charging DW];
+
+-- 4b. Crossjoin: Thành phố (Dim Station) x Trạng thái trạm (Fact Ev Charging)
+-- Dùng để đếm số lần sự cố theo từng thành phố
+SELECT 
+    {[Measures].[Fact Ev Charging Count], [Measures].[Avg Wait]} ON 0,
+    NON EMPTY Crossjoin(
+        [Dim Station].[Geography].[City].Members,
+        {[Fact Ev Charging].[Station Status].&[partial_outage],
+         [Fact Ev Charging].[Station Status].&[under_maintenance]}
+    ) ON 1
+FROM [EV Charging DW];
+
+
+/* ==============================================================================
+   TEST 5: PHÂN TÍCH CHÉO GIỮA 2 THUỘC TÍNH FACT VỚI NHAU (CROSSJOIN NỘI BỘ FACT)
+   Mục đích: Thử nghiệm cốt lõi của Câu 13 (Sự kiện x Mưa lớn).
+============================================================================== */
+
+-- 5a. Bảng ma trận 2 chiều giữa Local Event và Weather Condition
+SELECT 
+    {[Measures].[Fact Ev Charging Count], [Measures].[Avg Utilization]} ON 0,
+    NON EMPTY Crossjoin(
+        [Fact Ev Charging].[Local Event].[Local Event].Members,
+        [Fact Ev Charging].[Weather Condition].[Weather Condition].Members
+    ) ON 1
+FROM [EV Charging DW];
+
+-- 5b. Kiểm chứng 4 kịch bản của Câu 13 (Mức sử dụng TB trên toàn quốc):
+--   1. Bình thường (None + Clear)            : Kỳ vọng ~0,4170
+--   2. Chỉ có sự kiện (Has Event + Clear)    : Kỳ vọng ~0,4175
+--   3. Chỉ có mưa lớn (None + Heavy Rain)    : Kỳ vọng ~0,3660 (giảm ~12%)
+--   4. Cả hai (Has Event + Heavy Rain)       : Kỳ vọng ~0,3690 (khoảng 507 bản ghi)
+WITH
+    SET [Events] AS 
+        Except([Fact Ev Charging].[Local Event].[Local Event].Members,
+               {[Fact Ev Charging].[Local Event].&[none]})
+    MEMBER [Fact Ev Charging].[Local Event].[Co Su Kien] AS
+        Aggregate([Events])
+    MEMBER [Measures].[Scenario] AS
+        CASE 
+            WHEN [Fact Ev Charging].[Local Event].CurrentMember IS [Fact Ev Charging].[Local Event].&[none]
+                 AND [Fact Ev Charging].[Weather Condition].CurrentMember IS [Fact Ev Charging].[Weather Condition].&[clear]
+                 THEN "1. Binh thuong"
+            WHEN [Fact Ev Charging].[Local Event].CurrentMember IS [Fact Ev Charging].[Local Event].[Co Su Kien]
+                 AND [Fact Ev Charging].[Weather Condition].CurrentMember IS [Fact Ev Charging].[Weather Condition].&[clear]
+                 THEN "2. Chi co su kien"
+            WHEN [Fact Ev Charging].[Local Event].CurrentMember IS [Fact Ev Charging].[Local Event].&[none]
+                 AND [Fact Ev Charging].[Weather Condition].CurrentMember IS [Fact Ev Charging].[Weather Condition].&[heavy_rain]
+                 THEN "3. Chi co mua lon"
+            WHEN [Fact Ev Charging].[Local Event].CurrentMember IS [Fact Ev Charging].[Local Event].[Co Su Kien]
+                 AND [Fact Ev Charging].[Weather Condition].CurrentMember IS [Fact Ev Charging].[Weather Condition].&[heavy_rain]
+                 THEN "4. Ca su kien va mua lon"
+            ELSE "Khac"
+        END
+SELECT 
+    {[Measures].[Fact Ev Charging Count], [Measures].[Avg Utilization]} ON 0,
+    {
+        ([Fact Ev Charging].[Local Event].&[none], [Fact Ev Charging].[Weather Condition].&[clear]),
+        ([Fact Ev Charging].[Local Event].[Co Su Kien], [Fact Ev Charging].[Weather Condition].&[clear]),
+        ([Fact Ev Charging].[Local Event].&[none], [Fact Ev Charging].[Weather Condition].&[heavy_rain]),
+        ([Fact Ev Charging].[Local Event].[Co Su Kien], [Fact Ev Charging].[Weather Condition].&[heavy_rain])
+    } ON 1
+FROM [EV Charging DW];
+
+
+/* ==============================================================================
+   TEST 6: TẠO CALCULATED MEMBER TRÊN THUỘC TÍNH FACT (CÂU 12b & CÂU 13)
+   Mục đích: Chứng minh có thể định nghĩa Member ảo (Extreme Weather, Has Event) 
+   ngay trên thuộc tính Fact và tính độ tăng trưởng (Lift %).
+============================================================================== */
+
+WITH
+    -- Tạo Member ảo gom extreme_heat và freezing
+    MEMBER [Fact Ev Charging].[Weather Condition].[Extreme Weather] AS
+        Aggregate({
+            [Fact Ev Charging].[Weather Condition].&[extreme_heat],
+            [Fact Ev Charging].[Weather Condition].&[freezing]
+        })
+    -- Measure tính mức sử dụng lúc thời tiết bình thường (clear)
+    MEMBER [Measures].[Util Clear] AS
+        ([Fact Ev Charging].[Weather Condition].&[clear], [Measures].[Avg Utilization]),
+        FORMAT_STRING = "0.0000"
+    -- Measure tính mức sử dụng lúc thời tiết cực đoan (nóng cực độ + đóng băng)
+    MEMBER [Measures].[Util Extreme] AS
+        ([Fact Ev Charging].[Weather Condition].[Extreme Weather], [Measures].[Avg Utilization]),
+        FORMAT_STRING = "0.0000"
+    -- Tính % Chênh lệch (Extreme Lift %)
+    MEMBER [Measures].[Extreme Lift %] AS
+        IIF([Measures].[Util Clear] = 0 OR IsEmpty([Measures].[Util Clear]), NULL,
+            ([Measures].[Util Extreme] - [Measures].[Util Clear]) / [Measures].[Util Clear]),
+        FORMAT_STRING = "+0.0%;-0.0%;0.0%"
+SELECT 
+    {[Measures].[Util Clear], [Measures].[Util Extreme], [Measures].[Extreme Lift %]} ON 0,
+    NON EMPTY [Dim Station].[Geography].[City].Members ON 1
+FROM [EV Charging DW];
+
+
+/* ==============================================================================
+   TEST 7: DRILLTHROUGH VÀO BẢN GHI GIAO DỊCH DÙNG ĐIỀU KIỆN FACT DIMENSION (CÂU 15)
+   Mục đích: Kiểm tra lệnh DRILLTHROUGH có lọc chính xác theo Station Status, 
+   Utilization Level và trả về các dòng bản ghi chi tiết tương ứng không.
+============================================================================== */
+
+DRILLTHROUGH MAXROWS 50
+SELECT [Measures].[Ports Occupied] ON 0
+FROM [EV Charging DW]
+WHERE (
+    [Dim Station].[Geography].[City].&[San Francisco]&[CA], -- City San Francisco, bang CA
+    [Dim Date].[Month].&[2025]&[4]&[12],                    -- Tháng 12 năm 2025 (Quý 4)
+    [Dim Time].[Price Period].&[Evening Peak],             -- Giờ cao điểm tối
+    [Fact Ev Charging].[Utilization Level].&[Near Capacity],-- Mức quá tải gần hết công suất
+    [Fact Ev Charging].[Station Status].&[partial_outage]  -- Trạng thái gián đoạn một phần
+);

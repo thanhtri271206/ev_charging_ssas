@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9dbb7770-0440-41fb-89fc-7318d74786a2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="18493b8e-a41d-4bd9-a7df-fdde10e1b6c1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Fact Ev Charging</ID>
   <Name>Fact Ev Charging</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1610" scrolltop="-5660" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8065" y="16320" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1610" scrolltop="-5826" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8065" y="16320" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="fact_ev_charging" left="-149" top="-826" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4805" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="fact_ev_charging" left="-149" top="-826" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4805" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000c512000088130000" />
             </control>
@@ -51,7 +51,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-5660</Value>
+      <Value>-5826</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -68,54 +68,70 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="90e9d810-091f-4a5b-851a-2f260e977482">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="55906810-48bc-49d1-ab2e-4d3ed6002600">
     <DataSourceViewID>EV Charging DW</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="7d515fa7-9908-4fb8-a7ce-a01cd602bc58">
+  <ErrorConfiguration dwd:design-time-name="f19f5665-09eb-415c-8f86-46e47b79d4fb">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="9d508798-6ba4-4bf2-a7b9-d49ec0fd15db">
+    <Attribute dwd:design-time-name="52cfd077-550e-486f-9e0f-449d1e70ccf5">
       <ID>Fact Id</ID>
       <Name>Fact Id</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="4c0f00aa-4d3d-4c5b-a9bf-01afc47e0c01">
+        <KeyColumn dwd:design-time-name="4173553d-d92c-4d2b-8756-233d4c761134">
           <DataType>BigInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="648f1902-c5e2-4619-8a8c-1e66d81f3f27">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f0e0311-8f6a-4a92-85d8-d5bf1ead2a25">
             <TableID>dbo_fact_ev_charging</TableID>
             <ColumnID>fact_id</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="2285f440-91a8-4849-b819-9f0e247bd967">
+        <AttributeRelationship dwd:design-time-name="496f93c6-1cbd-4871-b021-65be9e8c2671">
           <AttributeID>Time Key</AttributeID>
           <Name>Time Key</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="30ba1e2f-f5c8-4afb-8332-aa8846ebf461">
+        <AttributeRelationship dwd:design-time-name="08b5054c-0cff-41e0-b6f5-afb3786ab3cc">
           <AttributeID>Date Key</AttributeID>
           <Name>Date Key</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7d6f1bbd-eae3-4ed0-bd83-914520786188">
+        <AttributeRelationship dwd:design-time-name="12e48330-4d70-4eb7-8da3-ecd0e175a687">
           <AttributeID>Station Key</AttributeID>
           <Name>Station Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="abfdcbc1-9a58-42eb-ac98-b0eeea406d77">
+          <AttributeID>Station Status</AttributeID>
+          <Name>Station Status</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="840297c9-56d4-4b50-a70a-ced40327630b">
+          <AttributeID>Weather Condition</AttributeID>
+          <Name>Weather Condition</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="13fef0af-2530-474c-a0e4-541004f54cb8">
+          <AttributeID>Local Event</AttributeID>
+          <Name>Local Event</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="eef5c4b5-1c3d-44ec-a045-9affc36b3ed8">
+          <AttributeID>Utilization Level</AttributeID>
+          <Name>Utilization Level</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="8825dc5d-e13f-407b-9a8f-aa0e71312972">
+    <Attribute dwd:design-time-name="58687cd7-999a-4641-9a4f-3a4975bb7968">
       <ID>Time Key</ID>
       <Name>Time Key</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="86528668-1114-4d3a-a258-0724100a9a38">
+        <KeyColumn dwd:design-time-name="9db6b54b-8416-4f4f-9b6b-384ba7e9a338">
           <DataType>WChar</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f0682d6-2f3b-4574-887c-9e3e235dacec">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b3b85dde-4495-4802-b454-31bd25365597">
             <TableID>dbo_fact_ev_charging</TableID>
             <ColumnID>time_key</ColumnID>
           </Source>
@@ -126,13 +142,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="876274db-097a-49c6-9dd2-d58fee00b873">
+    <Attribute dwd:design-time-name="2a55b988-c595-4385-bcd8-bdadab356994">
       <ID>Date Key</ID>
       <Name>Date Key</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="e4c09bfb-253f-4a10-a253-d795817e4170">
+        <KeyColumn dwd:design-time-name="3a96a539-2bac-4fd0-907a-9de9bb98247f">
           <DataType>Date</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="56b86721-7fca-4f6c-887d-fe8e4fffaa0d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aa76bb45-ff4a-40db-b5b0-466abc255bb6">
             <TableID>dbo_fact_ev_charging</TableID>
             <ColumnID>date_key</ColumnID>
           </Source>
@@ -143,13 +159,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="5a74c5a4-a5f6-4af7-b091-be308819d6e8">
+    <Attribute dwd:design-time-name="9a9ac122-bdd5-4bd8-bfb1-3cd8d330eb4e">
       <ID>Station Key</ID>
       <Name>Station Key</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="7603def0-dceb-43c7-8410-ed2ec95d5474">
+        <KeyColumn dwd:design-time-name="48f2e0c0-c187-4aec-a548-c7632d17ae87">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="219cd821-df2e-48d5-a92b-d56e4bbd7fe7">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="90796d30-eb95-4fab-bb0f-9138bff989f1">
             <TableID>dbo_fact_ev_charging</TableID>
             <ColumnID>station_key</ColumnID>
           </Source>
@@ -157,6 +173,70 @@
       </KeyColumns>
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c9284e96-3ffd-400b-b170-8a7b6a84eb20">
+      <ID>Station Status</ID>
+      <Name>Station Status</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8f2d81cb-ad25-4ff5-b7ca-79fe2a0e1a18">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0461e55a-e06f-4197-873f-961295eba704">
+            <TableID>dbo_fact_ev_charging</TableID>
+            <ColumnID>station_status</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b9e6cb6f-e141-4490-b885-cede6ca31c30">
+      <ID>Weather Condition</ID>
+      <Name>Weather Condition</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="022fb1a2-b0f6-4d2e-ae0f-086a5ab22b8a">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="766e63fd-eb94-4f84-93ef-5e2790307c9a">
+            <TableID>dbo_fact_ev_charging</TableID>
+            <ColumnID>weather_condition</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6a4a49fa-a36c-42bf-9f52-2930c82609af">
+      <ID>Local Event</ID>
+      <Name>Local Event</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="315a99b4-e128-4c66-a8fd-412c8a25f125">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6495d1c2-4f46-44e0-b882-1a8eaf3a855f">
+            <TableID>dbo_fact_ev_charging</TableID>
+            <ColumnID>local_event</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5519df4f-1522-4802-bb5a-1687c6471bd2">
+      <ID>Utilization Level</ID>
+      <Name>Utilization Level</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9e12da4f-1c48-4a7b-ae35-4990119beb70">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9164bb1b-4c48-4592-a3a0-774f1a190799">
+            <TableID>dbo_fact_ev_charging</TableID>
+            <ColumnID>utilization_level</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
